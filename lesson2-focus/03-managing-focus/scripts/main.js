@@ -6,7 +6,7 @@ page('/:slug', function(context) {
   // This will match any value after the first / in the url. For example, if
   // the url was /foo, the value of slug would be "foo".
   var slug = context.params.slug;
-
+  console.log(slug)
   // Remove is-active class from previous menu item and section
   var oldMenuItem = document.querySelector('#menu .is-active');
   var oldPage = document.querySelector('main .is-active');

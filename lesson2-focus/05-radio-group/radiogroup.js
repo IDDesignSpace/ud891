@@ -30,8 +30,19 @@
       case VK_LEFT: {
 
         e.preventDefault();
-
         // This seems like a good place to do some stuff :)
+        if (this.focusedIdx === 0) {
+          console.log(this.focusedIdx);
+          console.log(this.buttons.length);
+          this.focusedIdx = this.buttons.length - 1;
+          console.log(this.focusedIdx);
+        } else {
+          console.log(this.focusedIdx);
+          this.focusedIdx--;
+          console.log(this.focusedIdx);
+          console.log(this.buttons.length);
+          console.log(this.focusedButton)
+        }
 
         break;
 
@@ -41,6 +52,12 @@
       case VK_RIGHT: {
 
         e.preventDefault();
+
+        if (this.focusedIdx === this.buttons.length - 1) {
+          this.focusedIdx = 0;
+        } else {
+          this.focusedIdx++;
+        }
 
         // This seems like a good place to do some stuff :)
 
